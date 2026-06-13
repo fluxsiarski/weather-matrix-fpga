@@ -1,0 +1,506 @@
+
+*** Running vivado
+    with args -log weather_matrix_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source weather_matrix_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue May 26 10:36:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source weather_matrix_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/utils_1/imports/synth_1/weather_matrix_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/utils_1/imports/synth_1/weather_matrix_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top weather_matrix_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 32444
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1322.305 ; gain = 541.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'weather_matrix_top' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/weather_matrix_top.v:6]
+INFO: [Synth 8-6157] synthesizing module 'i2c_master' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/i2c_master.v:5]
+	Parameter SYS_CLK_HZ bound to: 125000000 - type: integer 
+	Parameter I2C_CLK_HZ bound to: 100000 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/i2c_master.v:335]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_master' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/i2c_master.v:5]
+INFO: [Synth 8-6157] synthesizing module 'bme680_driver' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/bme680_driver.v:6]
+	Parameter SYS_CLK_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bme680_driver' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/bme680_driver.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ccs811_driver' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/ccs811_driver.v:6]
+	Parameter SYS_CLK_HZ bound to: 125000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccs811_driver' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/ccs811_driver.v:6]
+INFO: [Synth 8-6157] synthesizing module 'display_formatter' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/display_formatter.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'display_formatter' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/display_formatter.v:9]
+INFO: [Synth 8-6157] synthesizing module 'oled_final' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/oled_final.v:6]
+INFO: [Synth 8-6157] synthesizing module 'font_rom' [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/font_rom.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'font_rom' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/font_rom.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'oled_final' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/oled_final.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'weather_matrix_top' (0#1) [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/weather_matrix_top.v:6]
+WARNING: [Synth 8-6014] Unused sequential element raw_press_reg was removed.  [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/bme680_driver.v:87]
+WARNING: [Synth 8-6014] Unused sequential element raw_hum_reg was removed.  [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/bme680_driver.v:88]
+WARNING: [Synth 8-6014] Unused sequential element tick_counter_reg was removed.  [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/sources_1/new/bme680_driver.v:93]
+WARNING: [Synth 8-7129] Port bme_valid in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[15] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[14] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[13] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[12] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[11] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[10] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[9] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[8] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[7] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[6] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[5] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[4] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[3] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[2] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[1] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[0] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[15] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[14] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[13] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[12] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[11] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[10] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[9] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[8] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[7] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[6] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[5] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[4] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[3] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[2] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[1] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tvoc_ppb[0] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_valid in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[7] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[6] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[5] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[4] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[3] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[2] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[1] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_dbg_raw1[0] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[7] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[6] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[5] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[4] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[3] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[2] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[1] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd4[0] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[7] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[6] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[5] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[4] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[3] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[2] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[1] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[0] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[7] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[6] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[5] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[4] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[3] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[2] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[1] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd6[0] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[7] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[6] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[5] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[4] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[3] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[2] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[1] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd7[0] in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_ack_error in module ccs811_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd2[3] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd2[2] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd2[1] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd2[0] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[3] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[2] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[1] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i2c_rd5[0] in module bme680_driver is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[3] in module weather_matrix_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[2] in module weather_matrix_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btn[1] in module weather_matrix_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aqs_int in module weather_matrix_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1470.340 ; gain = 689.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1470.340 ; gain = 689.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1470.340 ; gain = 689.340
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1470.340 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/constrs_1/new/weather_matrix.xdc]
+CRITICAL WARNING: [Netlist 29-177] Cannot set property 'BITSTREAM.GENERAL.UNUSEDPIN' because the property does not exist. [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/constrs_1/new/weather_matrix.xdc:7]
+Resolution: Create this property using create_property command before setting it.
+Finished Parsing XDC File [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/constrs_1/new/weather_matrix.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.srcs/constrs_1/new/weather_matrix.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/weather_matrix_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/weather_matrix_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1540.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1540.938 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1540.938 ; gain = 759.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1540.938 ; gain = 759.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1540.938 ; gain = 759.938
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'i2c_master'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'bme680_driver'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccs811_driver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_IDLE |                             0000 |                            00000
+                ST_START |                             0001 |                            00001
+               ST_ADDR_W |                             0010 |                            00010
+             ST_ADDR_ACK |                             0011 |                            00011
+              ST_WR_BYTE |                             0100 |                            00100
+               ST_WR_ACK |                             0101 |                            00101
+              ST_RESTART |                             0110 |                            00110
+               ST_ADDR_R |                             0111 |                            00111
+           ST_ADDR_R_ACK |                             1000 |                            01000
+              ST_RD_BYTE |                             1001 |                            01001
+               ST_RD_ACK |                             1010 |                            01010
+                 ST_STOP |                             1011 |                            01011
+                 ST_DONE |                             1100 |                            01100
+              ST_WR_LOAD |                             1101 |                            01101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'i2c_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0000 |                             0000
+                S_WR_HUM |                             0001 |                             0001
+              S_WR_HUM_W |                             0010 |                             0010
+               S_WR_MEAS |                             0011 |                             0011
+             S_WR_MEAS_W |                             0100 |                             0100
+            S_MEAS_DELAY |                             0101 |                             0101
+                    S_RD |                             0110 |                             0110
+                  S_RD_W |                             0111 |                             0111
+               S_PROCESS |                             1000 |                             1000
+            S_CYCLE_WAIT |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'bme680_driver'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                            00000 |                            00000
+                  S_WAKE |                            00001 |                            00001
+               S_RD_HWID |                            00010 |                            10100
+             S_RD_HWID_W |                            00011 |                            10101
+                S_RD_ST1 |                            00100 |                            00010
+              S_RD_ST1_W |                            00101 |                            00011
+                  S_CHK1 |                            00110 |                            00100
+                   S_APP |                            00111 |                            00101
+                 S_APP_W |                            01000 |                            00110
+             S_APP_DELAY |                            01001 |                            00111
+                S_RD_ST2 |                            01010 |                            01000
+              S_RD_ST2_W |                            01011 |                            01001
+                  S_CHK2 |                            01100 |                            01010
+                  S_MEAS |                            01101 |                            01011
+                S_MEAS_W |                            01110 |                            01100
+            S_CYCLE_WAIT |                            01111 |                            10011
+               S_RD_STAT |                            10000 |                            01101
+             S_RD_STAT_W |                            10001 |                            01110
+                 S_CHECK |                            10010 |                            01111
+               S_RD_DATA |                            10011 |                            10000
+             S_RD_DATA_W |                            10100 |                            10001
+               S_PROCESS |                            10101 |                            10010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccs811_driver'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1540.938 ; gain = 759.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 6     
+	   2 Input   28 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 18    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 10    
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               28 Bit    Registers := 4     
+	               20 Bit    Registers := 2     
+	               16 Bit    Registers := 6     
+	                8 Bit    Registers := 74    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 18    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 34    
++---Muxes : 
+	   2 Input   63 Bit        Muxes := 1     
+	  10 Input   28 Bit        Muxes := 1     
+	  22 Input   28 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input    8 Bit        Muxes := 4     
+	  14 Input    8 Bit        Muxes := 2     
+	  10 Input    8 Bit        Muxes := 2     
+	  22 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 9     
+	   6 Input    8 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 30    
+	   2 Input    7 Bit        Muxes := 18    
+	   4 Input    6 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	  29 Input    6 Bit        Muxes := 1     
+	  22 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   3 Input    5 Bit        Muxes := 2     
+	  14 Input    4 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 17    
+	  10 Input    4 Bit        Muxes := 2     
+	  22 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	  29 Input    4 Bit        Muxes := 4     
+	  22 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 4     
+	  29 Input    3 Bit        Muxes := 2     
+	  10 Input    2 Bit        Muxes := 1     
+	  22 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 60    
+	   4 Input    1 Bit        Muxes := 8     
+	  14 Input    1 Bit        Muxes := 44    
+	  10 Input    1 Bit        Muxes := 8     
+	  22 Input    1 Bit        Muxes := 12    
+	  29 Input    1 Bit        Muxes := 15    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port bme_valid in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[15] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[14] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[13] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[12] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[11] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[10] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[9] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[8] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[7] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[6] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[5] in module display_formatter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port eco2_ppm[4] in module display_formatter is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1878.480 ; gain = 1097.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|font_rom    | glyph      | 128x47        | LUT            | 
+|oled_final  | init_rom   | 64x8          | LUT            | 
+|oled_final  | p_0_out    | 64x8          | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1878.480 ; gain = 1097.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1878.480 ; gain = 1097.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1878.480 ; gain = 1097.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name        | RTL Name        | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|weather_matrix_top | rst_sync_reg[3] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-------------------+-----------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   171|
+|3     |LUT1   |   190|
+|4     |LUT2   |   318|
+|5     |LUT3   |   239|
+|6     |LUT4   |   289|
+|7     |LUT5   |   333|
+|8     |LUT6   |   653|
+|9     |MUXF7  |    34|
+|10    |MUXF8  |     4|
+|11    |SRL16E |     1|
+|12    |FDRE   |   601|
+|13    |FDSE   |    48|
+|14    |IBUF   |     5|
+|15    |IOBUF  |     2|
+|16    |OBUF   |    12|
+|17    |OBUFT  |     2|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 1982.750 ; gain = 1131.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1982.750 ; gain = 1201.750
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1992.859 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 211 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1999.543 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Synth Design complete | Checksum: 6514b20e
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 103 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 1999.543 ; gain = 1449.020
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1999.543 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/Studia/LUC/Projekt/macierz_sensoryczna_pogodowa/macierz_sensoryczna_pogodowa.runs/synth_1/weather_matrix_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file weather_matrix_top_utilization_synth.rpt -pb weather_matrix_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 26 10:37:22 2026...

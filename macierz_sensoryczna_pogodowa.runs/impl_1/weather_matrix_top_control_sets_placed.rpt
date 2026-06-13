@@ -1,0 +1,128 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Tue May 26 10:38:13 2026
+| Host         : DESKTOP-MA049OG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file weather_matrix_top_control_sets_placed.rpt
+| Design       : weather_matrix_top
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    50 |
+|    Minimum number of control sets                        |    50 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   158 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    50 |
+| >= 0 to < 4        |     7 |
+| >= 4 to < 6        |    15 |
+| >= 6 to < 8        |     5 |
+| >= 8 to < 10       |    14 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              92 |           41 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             534 |          235 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|    Clock Signal   |                 Enable Signal                |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  sysclk_IBUF_BUFG | u_oled/oled_res_i_1_n_0                      | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_oled/oled_dc_i_1_n_0                       | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_oled/oled_vccen_i_1_n_0                    | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_oled/oled_mosi_i_1_n_0                     | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_aqs/aqs_wake_n_i_1_n_0                     | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_oled/oled_pmoden_i_1_n_0                   | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_oled/oled_cs_i_1_n_0                       | u_fmt/rst_sync_reg[3]              |                1 |              1 |         1.00 |
+|  sysclk_IBUF_BUFG | u_i2c_aqs/FSM_sequential_state[3]_i_1__1_n_0 | u_fmt/rst_sync_reg[3]              |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data2[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                3 |              4 |         1.33 |
+|  sysclk_IBUF_BUFG | u_oled/CEC                                   | u_fmt/rst_sync_reg[3]              |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/FSM_sequential_state[3]_i_2_n_0    | u_fmt/rst_sync_reg[3]              |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/byte_idx[3]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/bit_cnt[3]_i_1_n_0                 | u_fmt/rst_sync_reg[3]              |                3 |              4 |         1.33 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data5[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | u_oled/win_i                                 | u_fmt/rst_sync_reg[3]              |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | u_i2c_aqs/byte_idx_reg[3]_i_1_n_0            | u_fmt/rst_sync_reg[3]              |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | u_i2c_aqs/bit_cnt[3]_i_1__0_n_0              | u_fmt/rst_sync_reg[3]              |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | u_oled/char_row                              | u_fmt/rst_sync_reg[3]              |                2 |              4 |         2.00 |
+|  sysclk_IBUF_BUFG | u_bme/FSM_sequential_state[3]_i_1__0_n_0     | u_fmt/rst_sync_reg[3]              |                1 |              4 |         4.00 |
+|  sysclk_IBUF_BUFG | u_oled/state[4]_i_1_n_0                      | u_fmt/rst_sync_reg[3]              |                3 |              5 |         1.67 |
+|  sysclk_IBUF_BUFG | u_oled/spi_busy                              | u_oled/sck_div[4]_i_1_n_0          |                1 |              5 |         5.00 |
+|  sysclk_IBUF_BUFG | u_aqs/FSM_sequential_state[4]_i_1_n_0        | u_fmt/rst_sync_reg[3]              |                3 |              5 |         1.67 |
+|  sysclk_IBUF_BUFG | u_oled/init_i                                | u_fmt/rst_sync_reg[3]              |                2 |              6 |         3.00 |
+|  sysclk_IBUF_BUFG | u_aqs/i2c_mode[0]_i_1__0_n_0                 | u_fmt/rst_sync_reg[3]              |                3 |              7 |         2.33 |
+|  sysclk_IBUF_BUFG | u_bme/i2c_mode[0]_i_1_n_0                    | u_fmt/rst_sync_reg[3]              |                5 |              7 |         1.40 |
+|  sysclk_IBUF_BUFG | u_oled/buf_addr[6]_i_1_n_0                   | u_fmt/rst_sync_reg[3]              |                2 |              7 |         3.50 |
+|  sysclk_IBUF_BUFG | u_oled/font_char[6]_i_1_n_0                  | u_fmt/rst_sync_reg[3]              |                2 |              7 |         3.50 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data7[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                5 |              8 |         1.60 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data0[7]_i_1__0_n_0             | u_fmt/rst_sync_reg[3]              |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data4[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data3[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                4 |              8 |         2.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/shift[7]_i_1_n_0                   | u_fmt/rst_sync_reg[3]              |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | u_i2c_aqs/shift[7]_i_1__0_n_0                | u_fmt/rst_sync_reg[3]              |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | u_aqs/dbg_raw0[7]_i_1_n_0                    | u_fmt/rst_sync_reg[3]              |                2 |              8 |         4.00 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data6[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                5 |              8 |         1.60 |
+|  sysclk_IBUF_BUFG | u_i2c_aqs/rd_data0[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                3 |              8 |         2.67 |
+|  sysclk_IBUF_BUFG | u_i2c_bme/rd_data1[7]_i_1_n_0                | u_fmt/rst_sync_reg[3]              |                5 |              8 |         1.60 |
+|  sysclk_IBUF_BUFG | u_oled/shift_reg[7]_i_1_n_0                  | u_fmt/rst_sync_reg[3]              |                4 |              8 |         2.00 |
+|  sysclk_IBUF_BUFG | u_oled/pixel_byte[7]_i_1_n_0                 | u_fmt/rst_sync_reg[3]              |                7 |              8 |         1.14 |
+|  sysclk_IBUF_BUFG |                                              | u_i2c_aqs/q_cnt[0]_i_1__0_n_0      |                3 |              9 |         3.00 |
+|  sysclk_IBUF_BUFG |                                              | u_i2c_bme/q_cnt[0]_i_1_n_0         |                3 |              9 |         3.00 |
+|  sysclk_IBUF_BUFG | u_aqs/status_byte[0]                         | u_fmt/rst_sync_reg[3]              |                5 |             10 |         2.00 |
+|  sysclk_IBUF_BUFG |                                              |                                    |               14 |             25 |         1.79 |
+|  sysclk_IBUF_BUFG |                                              | u_fmt/auto_refresh_cnt[27]_i_1_n_0 |                9 |             28 |         3.11 |
+|  sysclk_IBUF_BUFG | u_bme/delay[27]_i_1_n_0                      | u_fmt/rst_sync_reg[3]              |               11 |             28 |         2.55 |
+|  sysclk_IBUF_BUFG | u_oled/delay[27]_i_1__1_n_0                  | u_fmt/rst_sync_reg[3]              |               10 |             28 |         2.80 |
+|  sysclk_IBUF_BUFG | u_aqs/delay[27]_i_1__0_n_0                   | u_fmt/rst_sync_reg[3]              |               12 |             28 |         2.33 |
+|  sysclk_IBUF_BUFG |                                              | u_fmt/rst_sync_reg[3]              |               26 |             46 |         1.77 |
+|  sysclk_IBUF_BUFG | u_bme/raw_temp[19]_i_1_n_0                   | u_fmt/rst_sync_reg[3]              |               44 |             95 |         2.16 |
+|  sysclk_IBUF_BUFG | u_fmt/prev_mode0                             | u_fmt/rst_sync_reg[3]              |               57 |            145 |         2.54 |
++-------------------+----------------------------------------------+------------------------------------+------------------+----------------+--------------+
+
+
